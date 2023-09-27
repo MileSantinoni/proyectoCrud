@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css?family=Bangers&family=Open+Sans|Roboto");
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+/*esto es un comentario */
+
+/*estilos de la página principal*/
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(https://images4.alphacoders.com/992/992073.jpg);
+}
+
+*::-webkit-scrollbar {
+    width: 9px;
+    
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: rgb(84, 0, 105);
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #7c2f94;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    border-radius: 10px;
+   
+  }
+
+
+header {
+    width: 100vh;
+    height: 10vh;
+   position: absolute;
+    
+  }
+  
+  .star {
+    width: 2em;
+    height: 2em;
+    background-color: #a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    position: absolute;
+    top: 50%;
+    left: -50px;
+    border-radius: 50%;
+    animation: moveStar 4s linear infinite;
+  }
+  
+  @keyframes moveStar {
+    0% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(250px, -100px);
+    }
+    45% {
+        transform: translate(450px, 40px);
+      }
+    50% {
+      transform: translate(500px, 50px);
+    }
+    75% {
+      transform: translate(750px, -100px);
+    }
+    100% {
+      transform: translate(1200px, 0);
+    }
+  }
+  
+
+.title {
+    font-family: 'Bangers', cursive;
+    text-align: center;
+    font-size: 4em;
+    color: white;
+    margin-top: 1em;
+
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#app .btn-neon {
+    font-family: 'Bangers', cursive;
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: #fff;
+    letter-spacing: 4px;
+    font-size: 24px;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 1s;
+    margin-bottom: 1em;
+}
+
+.btn-neon:hover {
+    color: white;
+    background-color: #a945c7;
+    box-shadow: 0 0 10px #a945c7, 0 0 40px #a945c7, 0 0 80px #a945c7;
+    transition-delay: 2s;
+}
+
+.btn-neon span {
+    position: absolute;
+    display: block;
+}
+
+#span1 {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #a945c7);
+}
+
+.btn-neon:hover #span1 {
+    left: 100%;
+    transition: 1s;
+}
+
+#span3 {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #a945c7);
+}
+
+.btn-neon:hover #span3 {
+    right: 100%;
+    transition: 1s;
+    transition-delay: .5s;
+}
+
+#span2 {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #a945c7);
+}
+
+.btn-neon:hover #span2 {
+    top: 100%;
+    transition: 1s;
+    transition-delay: .25s;
+}
+
+#span4 {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #a945c7);
+}
+
+.btn-neon:hover #span4 {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: .75s;
+}
+
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.container .card {
+    width: 20em;
+    height: 20em;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 2);
+    overflow: hidden;
+    margin: .8em;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+.container .card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 2);
+}
+
+.container .card img {
+    width: 50%;
+}
+
+
+span {
+
+    height: 10em;
+    align-self: center;
+}
+
+
+.container .card h4 {
+    font-weight: 30%;
+    font-family: 'Bangers', cursive;
+}
+
+.container .card p {
+    padding: 0.1rem;
+    font-size: 100%;
+    font-weight: 1em;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+.container .card a {
+
+    text-decoration: none;
+
+}
+
+.button-container {
+    padding: .3em;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.boton {
+    flex: 0 0 48%;
+    margin: 1px;
+    border: .1em solid #4f295a;
+    /*anchura, estilo y color borde*/
+    background-color: #4f295a;
+    /*color botón*/
+    color: #ffffff;
+    /*color texto*/
+    text-decoration: none;
+    /*decoración texto*/
+    font-family: 'Julius Sans One', sans-serif;
+    /*tipografía texto*/
+    font-size: 1em;
+    border-radius: .9em;
+    /*bordes redondos*/
+}
+.boton a {
+    color: white;
+}
+
+
+/*fin de estilos de la página principal*/
+
+/*estilos de alta y edit*/
+
+.li {
+    font-family: 'Bangers', cursive;
+    border-radius: .3em;
+    font-size: 1.4em;
+    letter-spacing: 1.5px;
+
+}
+
+form {
+    color: white;
+    background-color: rgb(44, 34, 73);
+    margin: 10px auto;
+    width: 400px;
+    padding: 20px;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+
+.mb-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.mb-3 input {
+    margin-left: 30%;
+}
+
+.mb-3 input[type="number"] {
+    appearance: textfield;
+}
+
+.mb-3 input[type="number"]::-webkit-inner-spin-button,
+.mb-3 input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.mb-3 label {
+    justify-self: center;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+/*fin de estilos de alta y edit*/
